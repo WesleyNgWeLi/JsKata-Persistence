@@ -1,5 +1,11 @@
 import {expect, assert} from 'chai';
-import {curDrag} from './blub';
+import {curDrag, persistence, multDigits} from './blub';
+
+describe('doSomething', ()=>{
+    it('should do something', ()=>{
+        expect(1).to.eql(1)
+    })
+})
 
 describe('curDragon', ()=>{
     it('should return a string', ()=>{
@@ -14,20 +20,23 @@ describe('curDragon', ()=>{
     })
 })
 
-describe('curDragon1', ()=>{
-    it('should return a string', ()=>{
-        var dragName = curDrag('badonkadonk')
-        var dragSize = dragName('large')
-        var dragElem = dragSize('potatoes')
-        var result = dragElem
-        expect(result).to.be.a('string');
+describe('Persistence', ()=>{
+    it('should return a number', ()=>{
+        const result = persistence(355)
+        expect(result).to.be.a('number')
     })
-    it('should return correct response', ()=>{
-        var dragName = curDrag('badonkadonk')
-        var dragSize = dragName('large')
-        var dragElem = dragSize('potatoes')
-        var result = dragElem
-        const expectedResult = 'badonkadonk is a large sized dragon that breathes potatoes'
+
+    // it('should return correct loop count', ()=>{
+    //     const result = persistence(355)
+    //     const expectedResult = 4
+    //     expect(result).to.eql(expectedResult)
+    // })
+})
+
+describe('multDigit' ,()=>{
+    it('should return the multiple of input', ()=>{
+        const result = multDigits(123)
+        const expectedResult = 6
         expect(result).to.eql(expectedResult)
     })
 })
