@@ -26,15 +26,15 @@ describe('Persistence', ()=>{
         expect(result).to.be.a('number')
     })
 
-    // it('should return correct loop count', ()=>{
-    //     const result = persistence(355)
-    //     const expectedResult = 4
-    //     expect(result).to.eql(expectedResult)
-    // })
+    it('should return correct loop count', ()=>{
+        var result = persistence(355)
+        const expectedResult = 4
+        expect(result).to.eql(expectedResult)
+    })
 })
 
 describe('multDigit' ,()=>{
-    it('should return the multiple of input', ()=>{
+    it('should return the product of input', ()=>{
         const result = multDigits(123)
         const expectedResult = 6
         expect(result).to.eql(expectedResult)
