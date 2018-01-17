@@ -1,25 +1,5 @@
 import {expect, assert} from 'chai';
-import {curDrag, persistence, multDigits} from './blub';
-
-describe('doSomething', ()=>{
-    it('should do something', ()=>{
-        expect(1).to.eql(1)
-    })
-})
-
-describe('curDragon', ()=>{
-    it('should return a string', ()=>{
-        var result = curDrag('blubba')('medium')('water')
-        expect(result).to.be.a('string');
-    })
-
-    it('should return correct response', ()=>{
-        const result = curDrag('blubba')('medium')('water')
-        const expectedResult = 'blubba is a medium sized dragon that breathes water'
-        expect(result).to.eql(expectedResult)
-    })
-})
-
+import { persistence, multDigits} from './blub';
 describe('Persistence', ()=>{
     it('should return a number', ()=>{
         const result = persistence(355)

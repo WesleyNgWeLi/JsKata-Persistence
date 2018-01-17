@@ -1,11 +1,3 @@
-import { ECONNRESET } from "constants";
-
-let curDrag = 
-		name =>
-			size =>
-				element => 
-					name + " is a " + size + " sized dragon that breathes " + element 
-
 var persistence = (input, count = 0) =>{
 	if (input.toString().length == 1){
 		return count
@@ -26,4 +18,4 @@ const multDigits = (num) =>
 	.reduce(mult, 1)
 
 
-export {curDrag, persistence, multDigits}
+export {persistence, multDigits}
