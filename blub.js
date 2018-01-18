@@ -1,12 +1,9 @@
-var persistence = (input, count = 0) =>{
-	if (input.toString().length == 1){
-		return count
-	}
-	else{
+const persistence = (input, count = 0) =>{
+	if (input.toString().length != 1){
 		count++
-		var result = multDigits(input)
-		return persistence(result, count)
-	}
+		const result = multDigits(input)
+		return persistence(result, count)}
+	return count
 }
 
 const mult = (a, b) => a*b

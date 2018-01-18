@@ -7,7 +7,7 @@ describe('Persistence', ()=>{
     })
 
     it('should return correct loop count', ()=>{
-        var result = persistence(355)
+        const result = persistence(355)
         const expectedResult = 4
         expect(result).to.eql(expectedResult)
     })
